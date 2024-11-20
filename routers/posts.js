@@ -10,23 +10,33 @@ router.get("/", (req, res) => {
 /** Show */
 
 router.get("/:id", (req, res) => {
-  res.json("Dettagli della pizza" + res.params.id);
+  res.json("Dettagli del post con id: " + res.params.id);
 });
 
 /** Store */
 
 router.post("/", (req, res) => {
-  res.json("Crea un nuovo elemento");
+  res.json("Crea un nuovo post");
 });
 
 /** Update */
 
 router.put("/:id", (req, res) => {
-  res.json(
-    "Modifica interamente i dettagli della pizza con id: " + res.params.id
-  );
+  res.json("Modifica interamente i dettagli del post con id: " + res.params.id);
 });
 
 /** Modify */
 
-router.patch("/:id", (req, res) => {});
+router.patch("/:id", (req, res) => {
+  res.json(
+    "Modifica parzialmente i dettagli del post con id: " + res.params.id
+  );
+});
+
+/** Delete */
+
+router.delete("/:id", (req, res) => {
+  res.json("Elimina post");
+});
+
+module.exports = router;
