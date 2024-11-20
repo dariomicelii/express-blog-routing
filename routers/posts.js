@@ -12,7 +12,8 @@ router.get("/", (req, res) => {
 /** Show */
 
 router.get("/:id", (req, res) => {
-  res.json("Dettagli del post con id: " + res.params.id);
+  const { id } = req.params;
+  res.json(`Dettagli del post con id: ${id}`);
 });
 
 /** Store */
@@ -24,21 +25,22 @@ router.post("/", (req, res) => {
 /** Update */
 
 router.put("/:id", (req, res) => {
-  res.json("Modifica interamente i dettagli del post con id: " + res.params.id);
+  const { id } = req.params;
+  res.json(`Modifica interamente i dettagli del post con id: ${id}`);
 });
 
 /** Modify */
 
 router.patch("/:id", (req, res) => {
-  res.json(
-    "Modifica parzialmente i dettagli del post con id: " + res.params.id
-  );
+  const { id } = req.params;
+  res.json(`Modifica parzialmente i dettagli del post con id: ${id}`);
 });
 
 /** Destroy */
 
 router.delete("/:id", (req, res) => {
-  res.json("Elimina post");
+  const { id } = req.params;
+  res.json(`Elimina post con id: ${id}`);
 });
 
 module.exports = router;
