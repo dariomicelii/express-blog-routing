@@ -9,7 +9,6 @@ const postsRouter = require("./routers/posts.js");
 //   res.send("Server del mio blog");
 // });
 
-// app.use("/", postsRouter);
 app.use("/posts", postsRouter);
 
 app.listen(port, () => {
