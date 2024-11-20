@@ -34,3 +34,5 @@ let posts = [
     tag: ["#Pastaallabarbabietola", "#cucina", "#pasta", "#verdure"],
   },
 ];
+
+module.exports = posts;
