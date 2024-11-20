@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const posts = require("../app");
+
 /** Index */
 
 router.get("/", (req, res) => {
@@ -33,7 +35,7 @@ router.patch("/:id", (req, res) => {
   );
 });
 
-/** Delete */
+/** Destroy */
 
 router.delete("/:id", (req, res) => {
   res.json("Elimina post");
