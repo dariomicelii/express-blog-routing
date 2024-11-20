@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const posts = require("../app");
+const posts = require("../db/posts.js");
 
 /** Index */
 
